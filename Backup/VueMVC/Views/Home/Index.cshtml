@@ -1,0 +1,18 @@
+﻿@using System.Web.Optimization
+@{
+  ViewBag.Title = "Home Page";
+}
+
+<div id="app" class="row">
+  <div class="text-center">
+    <button class="btn btn-primary" v-on:click="toggleModal">Show modal!</button>
+    
+    <sweet-modal ref="modal">
+      <h3>@ViewBag.Message</h3>
+      </sweet-modal>
+  </div>
+</div>
+
+@section scripts {
+  @Scripts.Render("~/Scripts/bundle/home.js")
+}
