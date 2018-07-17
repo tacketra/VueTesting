@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import FirstComponent from './FirstComponent.vue'
+import tab from './TabComponent.vue'
 import {SweetModal, SweetModalTab} from 'sweet-modal-vue'
 
 new Vue({
     el: '#app',
     components: {
-        FirstComponent,
+        tab,
         SweetModal,
         SweetModalTab
     },
@@ -14,7 +14,12 @@ new Vue({
         show: true,
         showLabel: "hide",
         showText: "I'm shown!",
-        timer: ''
+        currentTab: '',
+        tabs: [
+            { id: 1, name: 'Home' },
+            { id: 2, name: 'Menu' },
+            { id: 3, name: 'Profile' }
+        ]
     },
     methods: {
         toggleModal (){
@@ -25,16 +30,7 @@ new Vue({
             this.showLabel = this.show ? "hide" : "show";
 
             return this.showLabel;
-        },
-        updateTimer() {
-            this.timer = new Date();
         }
-    },
-    mounted: function () {
-        this.interval = setInterval(this.updateTimer, 1000);
-    },
-    beforeDestroy() {
-        clearInterval(this.interval)
     }
 })
 

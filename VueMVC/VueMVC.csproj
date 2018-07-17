@@ -139,6 +139,7 @@
   <ItemGroup>
     <Content Include="Content\core.css" />
     <None Include="packages.config" />
+    <Content Include="Scripts\app\home\TabComponent.vue" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\WebApplications\Microsoft.WebApplication.targets" />
